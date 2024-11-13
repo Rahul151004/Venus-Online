@@ -36,7 +36,7 @@ function MenuItems() {
       getCurrentMenuItem.id !== "products" &&
       getCurrentMenuItem.id !== "search"
         ? {
-            category: [getCurrentMenuItem.id],
+            Category: [getCurrentMenuItem.id],
           }
         : null;
 
@@ -44,7 +44,7 @@ function MenuItems() {
 
     location.pathname.includes("listing") && currentFilter !== null
       ? setSearchParams(
-          new URLSearchParams(`?category=${getCurrentMenuItem.id}`)
+          new URLSearchParams(`?Category=${getCurrentMenuItem.id}`)
         )
       : navigate(getCurrentMenuItem.path);
   }

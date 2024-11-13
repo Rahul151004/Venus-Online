@@ -16,8 +16,8 @@ const searchProducts = async (req, res) => {
       $or: [
         { title: regEx },
         { description: regEx },
-        { category: regEx },
-        { brand: regEx },
+        { Category: regEx },
+        { Care: regEx },
       ],
     };
 

@@ -50,7 +50,7 @@ function ShoppingListing() {
   const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
   const { toast } = useToast();
 
-  const categorySearchParam = searchParams.get("category");
+  const categorySearchParam = searchParams.get("Category");
 
   function handleSort(value) {
     setSort(value);
