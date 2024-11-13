@@ -35,10 +35,10 @@ function ShoppingProductTile({
           <h2 className="text-xl font-bold mb-2">{product?.title}</h2>
           <div className="flex justify-between items-center mb-2">
             <span className="text-[16px] text-muted-foreground">
-              {categoryOptionsMap[product?.category]}
+              {categoryOptionsMap[product?.Category]}
             </span>
             <span className="text-[16px] text-muted-foreground">
-              {brandOptionsMap[product?.brand]}
+              {brandOptionsMap[product?.Care]}
             </span>
           </div>
           <div className="flex justify-between items-center mb-2">

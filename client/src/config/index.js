@@ -54,26 +54,26 @@ export const addProductFormElements = [
     placeholder: "Enter product description",
   },
   {
-    label: "category",
-    name: "category",
+    label: "Category",
+    name: "Category",
     componentType: "select",
     options: [
       { id: "plants", label: "Plants" },
       { id: "seeds", label: "Seeds" },
       { id: "pots", label: "Pots" },
-      { id: "accessories", label: "Accessories" },
-      { id: "footwear", label: "Footwear" },
+      { id: "gifting", label: "Gifting" },
+      { id: "tools", label: "Tools" },
     ],
   },
   {
-    label: "Brand",
-    name: "brand",
+    label: "Care",
+    name: "Care",
     componentType: "select",
     options: [
-      { id: "nike", label: "Nike" },
-      { id: "adidas", label: "Adidas" },
-      { id: "puma", label: "Puma" },
-      { id: "levi", label: "Levi's" },
+      { id: "beginner", label: "Beginner-Friendly" },
+      { id: "low", label: "Low-Care" },
+      { id: "medium", label: "Medium-Care" },
+      { id: "high", label: "High-Care" },
       { id: "zara", label: "Zara" },
       { id: "h&m", label: "H&M" },
     ],
@@ -128,13 +128,13 @@ export const shoppingViewHeaderMenuItems = [
     path: "/shop/listing",
   },
   {
-    id: "footwear",
-    label: "Footwear",
+    id: "tools",
+    label: "Tools",
     path: "/shop/listing",
   },
   {
-    id: "accessories",
-    label: "Accessories",
+    id: "gifting",
+    label: "Gifting",
     path: "/shop/listing",
   },
   {
@@ -148,32 +148,32 @@ export const categoryOptionsMap = {
   plants: "Plants",
   seeds: "Seeds",
   pots: "Pots",
-  accessories: "Accessories",
-  footwear: "Footwear",
+  gifting: "Gifting",
+  tools: "Tools",
 };
 
 export const brandOptionsMap = {
-  nike: "Nike",
-  adidas: "Adidas",
-  puma: "Puma",
-  levi: "Levi",
+  beginner: "Beginner-Friendly",
+  low: "Low-Care",
+  medium: "Medium-Care",
+  high: "High-Care",
   zara: "Zara",
   "h&m": "H&M",
 };
 
 export const filterOptions = {
-  category: [
+  Category: [
     { id: "plants", label: "Plants" },
     { id: "seeds", label: "Seeds" },
     { id: "pots", label: "Pots" },
-    { id: "accessories", label: "Accessories" },
-    { id: "footwear", label: "Footwear" },
+    { id: "gifting", label: "Gifting" },
+    { id: "tools", label: "Tools" },
   ],
-  brand: [
-    { id: "nike", label: "Nike" },
-    { id: "adidas", label: "Adidas" },
-    { id: "puma", label: "Puma" },
-    { id: "levi", label: "Levi's" },
+  Care: [
+    { id: "beginner", label: "Beginner-Friendly" },
+    { id: "low", label: "Low-Care" },
+    { id: "medium", label: "Medium-Care" },
+    { id: "high", label: "High-Care" },
     { id: "zara", label: "Zara" },
     { id: "h&m", label: "H&M" },
   ],
