@@ -1,10 +1,14 @@
 import { Outlet } from "react-router-dom";
+import bannerImage from "../../assets/auth-banner.jpg";
 
 function AuthLayout() {
   return (
     <div className="flex min-h-screen w-full">
-      <div className="hidden lg:flex items-center justify-center bg-black w-1/2 px-12">
-        <div className="max-w-md space-y-6 text-center text-primary-foreground">
+      <div className="hidden lg:flex items-center justify-center bg-cover bg-center w-1/2 px-12 relative"
+      style={{ backgroundImage: `url(${bannerImage})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+        <div className="max-w-md space-y-6 text-center text-white relative z-10">
           <h1 className="text-4xl font-extrabold tracking-tight">
             Welcome to Venus Online
           </h1>
