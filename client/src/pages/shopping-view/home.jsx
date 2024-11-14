@@ -49,10 +49,8 @@ const categoriesWithIcon = [
 const brandsWithIcon = [
   { id: "beginner", label: "Beginner-Friendly", icon: Droplet },
   { id: "low", label: "Low-Care", icon: Droplets },
-  { id: "medium", label: "Medium-Care", icon: Flower },
-  { id: "high", label: "High-Care", icon: CloudRain },
-  { id: "zara", label: "Zara", icon: Images },
-  { id: "h&m", label: "H&M", icon: CloudSunRain },
+  { id: "medium", label: "Medium-Care", icon: CloudRain },
+  { id: "high", label: "High-Care", icon: CloudSunRain },
 ];
 function ShoppingHome() {
 
@@ -195,7 +193,7 @@ function ShoppingHome() {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Shop by Care-Level</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {brandsWithIcon.map((brandItem) => (
               <Card
                 onClick={() => handleNavigateToListingPage(brandItem, "Care")}

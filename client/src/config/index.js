@@ -74,8 +74,6 @@ export const addProductFormElements = [
       { id: "low", label: "Low-Care" },
       { id: "medium", label: "Medium-Care" },
       { id: "high", label: "High-Care" },
-      { id: "zara", label: "Zara" },
-      { id: "h&m", label: "H&M" },
     ],
   },
   {
@@ -157,8 +155,6 @@ export const brandOptionsMap = {
   low: "Low-Care",
   medium: "Medium-Care",
   high: "High-Care",
-  zara: "Zara",
-  "h&m": "H&M",
 };
 
 export const filterOptions = {
@@ -174,8 +170,6 @@ export const filterOptions = {
     { id: "low", label: "Low-Care" },
     { id: "medium", label: "Medium-Care" },
     { id: "high", label: "High-Care" },
-    { id: "zara", label: "Zara" },
-    { id: "h&m", label: "H&M" },
   ],
 };
 
