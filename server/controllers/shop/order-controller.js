@@ -109,7 +109,7 @@ const capturePayment = async (req, res) => {
     }
 
     order.paymentStatus = "paid";
-    order.orderStatus = "confirmed";
+    order.orderStatus = "Confirmed";
     order.paymentId = paymentId;
     order.payerId = payerId;
 
@@ -135,7 +135,7 @@ const capturePayment = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Order confirmed",
+      message: "Order Confirmed",
       data: order,
     });
   } catch (e) {

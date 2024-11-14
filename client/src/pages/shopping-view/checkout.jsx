@@ -71,7 +71,7 @@ function ShoppingCheckout() {
         phone: currentSelectedAddress?.phone,
         notes: currentSelectedAddress?.notes,
       },
-      orderStatus: "pending",
+      orderStatus: "Pending",
       paymentMethod: "paypal",
       paymentStatus: "pending",
       totalAmount: totalCartAmount,
