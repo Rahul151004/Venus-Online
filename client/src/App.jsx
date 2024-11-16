@@ -19,6 +19,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { checkAuth } from "./store/auth-slice";
 import { Skeleton } from "@/components/ui/skeleton";
+import Spinner from "./components/ui/spinner";
 import PaypalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
 import SearchProducts from "./pages/shopping-view/search";
@@ -38,8 +39,13 @@ function App() {
     dispatch(checkAuth(token));
   }, [dispatch]);
 
-  if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
-
+  if (isLoading){ 
+      return (
+      <div className="flex items-center justify-center h-screen bg-gray-50">
+        <Spinner size="8" color="border-green-500" />
+      </div>
+    );
+  }
   console.log(isLoading, user);
 
   return (
