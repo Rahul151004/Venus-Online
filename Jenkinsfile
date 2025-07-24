@@ -4,7 +4,7 @@ pipeline{
     environment {
         BACKEND_IMAGE = 'rbhat04/venus-server:latest'
         FRONTEND_IMAGE = 'rbhat04/venus-client:latest'
-        VITE_API_URL = 'http://venusonline-server-1:5000'
+        VITE_API_URL = 'http://server:5000'
     }
 
     stages{
