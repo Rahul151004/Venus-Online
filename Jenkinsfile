@@ -4,20 +4,21 @@ pipeline{
     environment {
         BACKEND_IMAGE = 'rbhat04/venus-server:latest'
         FRONTEND_IMAGE = 'rbhat04/venus-client:latest'
+        VITE_API_URL = 'http://venusonline-server-1:5000'
     }
 
     stages{
-        // stage('Clone Repository'){
-        //     steps{
-        //         git 'https://github.com/Rahul151004/Venus-Online.git'
-        //     }
-        // }
+        stage('Clone Repository'){
+            steps{
+                git branch: 'feature/devops-pipeline', url:'https://github.com/Rahul151004/Venus-Online.git'
+            }
+        }
 
         stage('Build Images'){
             steps{
                 bat '''
                 docker build -t %BACKEND_IMAGE% ./server
-                docker build -t %FRONTEND_IMAGE% ./client
+                docker build --build-arg VITE_API_URL=%VITE_API_URL% -t %FRONTEND_IMAGE% ./client
                 '''
             }
         }
@@ -40,25 +41,16 @@ pipeline{
             }
         }
 
-        stage('Run Images'){
-            steps{
-                bat '''
-                echo Running backend container...
-                docker run -d --name venus-server -p 5000:5000 %BACKEND_IMAGE%
-
-                echo Running frontend container...
-                docker run -d --name venus-client -p 3000:80 %FRONTEND_IMAGE%
-                '''
-            }
-        }
 
         stage('Run with Docker Compose') {
             steps {
-                bat '''
-                echo Starting containers...
-                docker compose down
-                docker compose up -d --build
-                '''
+                withCredentials([file(credentialsId: 'venus-env-file', variable: 'ENV_FILE')]) {
+                    bat """
+                        copy %ENV_FILE% server\\.env
+                        docker compose down
+                        docker compose up -d --build
+                    """
+                }
             }
         }
         
