@@ -7,11 +7,11 @@ pipeline{
     }
 
     stages{
-        stage('Clone Repository'){
-            steps{
-                git 'https://github.com/Rahul151004/Venus-Online.git'
-            }
-        }
+        // stage('Clone Repository'){
+        //     steps{
+        //         git 'https://github.com/Rahul151004/Venus-Online.git'
+        //     }
+        // }
 
         stage('Build Images'){
             steps{
