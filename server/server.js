@@ -33,7 +33,8 @@ const allowedOrigins = [
   "http://localhost:3000",     // for local dev
   "http://localhost:30010",    // for NodePort access
   "http://localhost:5173",
-  "http://13.232.8.124",
+  "http://13.233.250.123",
+  "http://localhost",
 ];
 
 app.use(
