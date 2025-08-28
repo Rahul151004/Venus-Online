@@ -32,6 +32,7 @@ const allowedOrigins = [
   process.env.CLIENT_BASE_URL,
   "http://localhost:3000",     // for local dev
   "http://localhost:30010",    // for NodePort access
+  "http://localhost:5173",
 ];
 
 app.use(
